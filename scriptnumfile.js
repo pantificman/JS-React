@@ -98,7 +98,7 @@ let personalMovieDB = {
 4) Потренироваться и переписать цикл еще двумя способами*/
 
 // Код возьмите из предыдущего домашнего задания
-let numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?', "10");
+/* let numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?', "10");
 let personalMovieDB = {
     count : numberOfFilms,
     movies : {},
@@ -113,7 +113,7 @@ let personalMovieDB = {
         if(a != null && b != null && a != "" && b != "" && a.length < 50){
             personalMovieDB.movies[a] = b;
         } else {
-            i--; /* если это условие не выполнилось мы вернемся на один цикл назад, чтобы снова задать вопросы заново */
+            i--;
         }
     }
     if(personalMovieDB.count < 10){
@@ -125,4 +125,22 @@ console.log("Просмотрено довольно мало фильмов");
     } else {
         console.log("Ошибка");
     }
-     console.log(personalMovieDB);
+     console.log(personalMovieDB); */
+
+     /* function showFirstMessage(){
+console.log("Hi everyone!");
+     }
+     showFirstMessage(); */
+
+    /*  function fun(a, b){
+         return (a + b);
+         console.log()
+     }
+   
+     console.log(fun(6,8)); */
+
+     let logger=function(){
+        console.log("ok");
+     };
+logger();
+ const calc=( a,b ) => a+b;
