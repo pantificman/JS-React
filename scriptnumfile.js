@@ -170,7 +170,7 @@ genres
 
 P.S. Функции вызывать не обязательно*/
 
-let numberOfFilms;
+/* let numberOfFilms;
 
 function start() {
     numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?', "10");
@@ -201,7 +201,7 @@ function myFavouriteFilms(){
     }
 }   
 
-/* myFavouriteFilms(); */
+myFavouriteFilms();
 
 function detectPersonallevel(){
     if(personalMovieDB.count < 10){
@@ -215,7 +215,7 @@ function detectPersonallevel(){
             }
 }
 
-/* detectPersonallevel(); */
+detectPersonallevel();
 
 function showMyDB(){
     if (personalMovieDB.privat == false){
@@ -233,4 +233,50 @@ function writeYourGenres(){
         personalMovieDB.genres[i-1] = genre;
     }
 }
-writeYourGenres();
+writeYourGenres(); */
+
+/* function learnJS(lang, callback) {
+    console.log(`Я изучаю ${lang}`);
+    callback();
+}
+
+function done(){
+    console.log("Я прошел этот урок");
+}
+
+learnJS("JS", done); */
+
+let options = {
+    name: "test",
+    hight: 1024,
+    width: 1024,
+    colors: {
+        border: "red",
+        bg: "black"
+    },
+    makeTest: function(){
+      console.log("test");
+    }
+};
+
+options.makeTest();
+
+let {border, bg} = options.colors;
+console.log(border);
+delete options.name;
+
+console.log(options);
+
+
+for (let key in options) {
+    if(typeof(options[key]) === "object"){
+        for(let i in options[key]){
+            console.log(`Свойство ${i} имеет значение ${options[key][i]}`);
+        }
+    } else {
+        console.log(`Свойство ${key} имеет значение ${options[key]}`);
+    }
+   
+}
+
+console.log(Object.keys(options).length);
