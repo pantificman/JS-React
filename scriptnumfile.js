@@ -246,7 +246,7 @@ function done(){
 
 learnJS("JS", done); */
 
-let options = {
+/* let options = {
     name: "test",
     hight: 1024,
     width: 1024,
@@ -279,4 +279,198 @@ for (let key in options) {
    
 }
 
-console.log(Object.keys(options).length);
+console.log(Object.keys(options).length); */
+/* 
+let arr = [1, 2, 3, 6, 8];
+arr.pop();
+console.log(arr); */
+
+/* let str = prompt("","");
+let products = str.split("","");
+console.log(products.join(';')); */
+/* const obj = {
+    a: 5,
+    b: 1
+};
+
+const copy = obj; // передает ссылку, а не значение
+
+copy.a = 10; */
+
+/* const add = {
+    d: 6,
+    e: 8
+};
+
+const clone = Object.assign({}, add); */
+
+/* const Arreyfirst = ["a", "b", "c"];
+
+const Arreysecond = ["d", "e", "f"];
+
+const newArr = [...Arreyfirst, ...Arreysecond, "g", "h"];
+
+console.log(newArr); */
+
+/* function log(a, b, c){
+console.log(a);
+console.log(b);
+console.log(c);
+}
+
+const arr=[5, 88, 7];
+
+log(...arr); */
+
+/* const arr = [8, 71, 2];
+
+const arr2 = [...arr];  */
+
+/* const obj = {
+    f: 5,
+    t: 9
+};
+
+const newObj = {...obj}; */
+
+/* const john = {
+    health: 100,
+    armour: 300
+};
+const soldier = {
+    health: 80
+};
+
+/* john.__proto__= soldier; // старый метод, не используется */
+
+/* Object.setPrototypeOf(john, soldier);
+
+const johnny = Object.create(soldier); */
+/* 
+function checkAge(age) {
+    if (age < 18) {
+      const message = "Sorry, you're too young.";
+    } else {
+      const message = "Yay! You're old enough!";
+    }
+
+    return message;
+  }
+  
+  console.log(checkAge(21)); */
+
+/* Задание на урок:
+
+1) У нас уже есть рабочее приложение, состоящее из отдельных функций. Представьте, что
+перед вами стоит задача переписать его так, чтобы все функции стали методами объекта personalMovieDB
+Такое случается в реальных продуктах при смене технологий или подхода к архитектуре программы
+
+2) Создать метод toggleVisibleMyDB, который при вызове будет проверять свойство privat. Если оно false - он
+переключает его в true, если true - переключает в false. Протестировать вместе с showMyDB.
+
+3) В методе writeYourGenres запретить пользователю нажать кнопку "отмена" или оставлять пустую строку. 
+Если он это сделал - возвращать его к этому же вопросу. После того, как все жанры введены - 
+при помощи метода forEach вывести в консоль сообщения в таком виде:
+"Любимый жанр #(номер по порядку, начиная с 1) - это (название из массива)"*/
+
+
+
+/* let personalMovieDB = {
+    count : 0,
+    movies : {},
+    actors : {},
+    genres : [],
+    privat : false,
+    start :  function() {
+        personalMovieDB.count = prompt('Сколько фильмов вы уже посмотрели?', "10");
+        while (personalMovieDB.count == null || personalMovieDB.count == "" || isNaN(personalMovieDB.count)){
+            personalMovieDB.count = prompt('Сколько фильмов вы уже посмотрели?', "10");
+        }
+    },
+    myFavouriteFilms: function(){
+        for (let i = 0; i < 2; i++){
+            let a = prompt('Один из последних просмотренных фильмов?', ""),
+                b = prompt('На сколько оцените его?', "");
+            if(a != null && b != null && a != "" && b != "" && a.length < 50){
+                personalMovieDB.movies[a] = b;
+            } else {
+                i--;
+            }
+        }
+    },
+    detectPersonallevel: function(){
+        if(personalMovieDB.count < 10){
+            console.log("Просмотрено довольно мало фильмов");
+                } else if (personalMovieDB.count >= 10 && personalMovieDB.count <=30) {
+                    console.log("Вы классический зритель");
+                } else if (personalMovieDB.count >30) {
+                    console.log("Вы киномань");
+                } else {
+                    console.log("Ошибка");
+                }
+    },
+    showMyDB: function(){
+        if (personalMovieDB.privat == false){
+     console.log(personalMovieDB);
+        }
+    },
+    toggleVisibleMyDB: function(){
+if (personalMovieDB.privat){
+            personalMovieDB.privat = false;
+        } else {
+            personalMovieDB.privat = true;
+        }
+    },
+    writeYourGenres: function(){
+        for(let i = 1; i<=3; i++){
+            let genre=prompt(`Ваш любимый жанр под номером ${i}`);
+
+            if( genre == "" || genre == null){
+                console.log("Вы ввели некорректные данные");
+                i--;
+            } else {
+                personalMovieDB.genres[i-1] = genre;
+            }
+        }
+        personalMovieDB.genres.forEach((item, i) => {
+            console.log(`Любимый жанр ${i + 1} - это ${item}`);
+        });
+    }
+
+}; */
+
+/* const box = document.getElementById("box");
+console.log(box);
+
+const btns = document.getElementsByTagName("button")[1];
+console.log(btns[1]); */
+
+/* const btns = document.getElementsByClassName("cercle"); */
+
+/* const btns = document.querySelectorAll("#box"); */
+
+/* const box = document.getElementById("box"),
+      btns = document.getElementsByTagName("button"),
+      circles = document.getElementsByClassName("circles"),
+      hearts = document.querySelectorAll("hearts"),
+      oneHearts = document.querySelector("heart");
+
+box.style.backgroundcolor = 'blue';
+box.style.width = "500px";
+
+btns[1].style.hight = "20px";
+circles[3].style.cssText = "background-color: blue; width: 50px"; */
+
+const div = document.createElement('div');
+div.classlist.add('black');
+document.body.append(div);
+document.querySelector("wrapper").append(div);
+
+hearts[0].before(div);
+
+circles[0].remove();
+
+hearts[0].replaceWith(circles[0]);
+div.innerHTML = "<h1>Hello World</h1>";
+
+div.textContent = "<h1>Hello World</h1>";
