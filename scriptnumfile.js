@@ -461,7 +461,7 @@ box.style.width = "500px";
 btns[1].style.hight = "20px";
 circles[3].style.cssText = "background-color: blue; width: 50px"; */
 
-const div = document.createElement('div');
+/* const div = document.createElement('div');
 div.classlist.add('black');
 document.body.append(div);
 document.querySelector("wrapper").append(div);
@@ -473,4 +473,51 @@ circles[0].remove();
 hearts[0].replaceWith(circles[0]);
 div.innerHTML = "<h1>Hello World</h1>";
 
-div.textContent = "<h1>Hello World</h1>";
+div.textContent = "<h1>Hello World</h1>"; */
+
+
+let arr = ["audi"," BMW", " porsh", ' Opel', ' Suzuki'];
+
+let author = document.querySelector(".authorOfCourse");
+
+
+
+arr[5] = "lada";
+
+console.log(arr);
+author.innerText = arr;
+
+let arr1 = document.querySelectorAll("span");
+
+arr1[0].innerText = "ГЛАВНАЯ";
+
+arr1[1].style.color = "white";
+
+const div = document.createElement('div');
+document.body.append(div);
+div.innerHTML = "<p> Новый параграф </p>";
+
+function sum(a,b){
+    let с = a+b;
+    return с;
+}
+arr[6] = sum(1,3);
+
+const div2 = document.createElement('div');
+document.body.append(div2);
+div2.innerHTML = `<p> Параграф ${sum(1,3)}</p>`;
+
+let inputClass = document.querySelector(".inpClass");
+let buttonClass = document.querySelector(".butClass");
+
+buttonClass.addEventListener("click", function(){
+    let inputValue = inputClass.value;
+    div2.innerText = `Слова автора: ${inputValue}`;
+});
+
+
+
+
+
+
+
