@@ -559,14 +559,14 @@ let inputBtn = document.querySelector(".inputNum"),
         result = inputBtn.value;
     })
 
-    /* oneBtn.addEventListener("click", function (){
+    oneBtn.addEventListener("click", function (){
         inputBtn.value = inputBtn.value + "1"});
 
     twoBtn.addEventListener("click", function (){
         inputBtn.value = inputBtn.value + "2"});
 
 
-        let buttoninput = document.createElement("input");
+        /* let buttoninput = document.createElement("input");
         buttoninput.setAttribute("type", "number");
 
         let buttonEnter = document.createElement("button");
@@ -578,14 +578,18 @@ let inputBtn = document.querySelector(".inputNum"),
         body.appendChild(buttonEnter); */
 
 let body = document.querySelector("body");
-
+let arr = [];
 
         for (let i = 1; i < 10; i++){ 
             let inputAny = document.createElement("input");
             inputAny.setAttribute("type", "number");
-            body.appendChild(inputAny); 
+            body.appendChild(inputAny);
+            /* inputAny = `inputAny ${i}`; */
+            arr.push(`inputAny ${i}`);
 
             let buttonAny = document.createElement("button");
             body.appendChild(buttonAny);
-            buttonAny.innerText = "кнопка";
+            buttonAny.innerText = `кнопка ${i}`;
+            arr.push(`buttonAny ${i}`);
             }
+console.log(arr);
