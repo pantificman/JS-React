@@ -476,7 +476,7 @@ div.innerHTML = "<h1>Hello World</h1>";
 div.textContent = "<h1>Hello World</h1>"; */
 
 
-let arr = ["audi"," BMW", " porsh", ' Opel', ' Suzuki'];
+/* let arr = ["audi"," BMW", " porsh", ' Opel', ' Suzuki'];
 
 let author = document.querySelector(".authorOfCourse");
 
@@ -515,9 +515,77 @@ buttonClass.addEventListener("click", function(){
     div2.innerText = `Слова автора: ${inputValue}`;
 });
 
+let division=5%2;
+console.log(5%2);
+
+function lovefunc(flower1, flower2){
+    if (flower1%2 == true && flower2%2 == false || flower1%2 == false && flower2%2 == true){
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+console.log(lovefunc(12,12)); */
+
+let inputBtn = document.querySelector(".inputNum"),
+    resetBtn = document.querySelector(".reset"),
+    oneBtn = document.querySelector(".one"),
+    twoBtn = document.querySelector(".two"),
+    threeBtn = document.querySelector(".three"),
+    fourBtn = document.querySelector(".four"),
+    fiveBtn = document.querySelector(".five"),
+    sixBtn = document.querySelector(".six"),
+    sevenBtn = document.querySelector(".seven"),
+    eightBtn = document.querySelector(".eight"),
+    nineBtn = document.querySelector(".nine"),
+    zeroBtn = document.querySelector(".zero"),
+    plusBtn = document.querySelector(".additione"),
+    minusBtn = document.querySelector(".substructione"),
+    divideBtn = document.querySelector(".divisione"),
+    multiplyBtn = document.querySelector(".multiplication"),
+    equalBtn = document.querySelector(".equal");
+
+    resetBtn.addEventListener("click", function (){
+        inputBtn.value = ''
+    });
+    
+    minusBtn.addEventListener("click", function(){
+        inputBtn.value = parseInt(inputBtn.value);
+
+        let numone = inputBtn.value;
+        let numtwo = inputBtn.value-numone;
+        let result = numone-numtwo;
+        result = inputBtn.value;
+    })
+
+    /* oneBtn.addEventListener("click", function (){
+        inputBtn.value = inputBtn.value + "1"});
+
+    twoBtn.addEventListener("click", function (){
+        inputBtn.value = inputBtn.value + "2"});
 
 
+        let buttoninput = document.createElement("input");
+        buttoninput.setAttribute("type", "number");
+
+        let buttonEnter = document.createElement("button");
+        buttonEnter.innerText = "нажать";
+
+        let body = document.querySelector("body");
+
+        body.appendChild(buttoninput);
+        body.appendChild(buttonEnter); */
+
+let body = document.querySelector("body");
 
 
+        for (let i = 1; i < 10; i++){ 
+            let inputAny = document.createElement("input");
+            inputAny.setAttribute("type", "number");
+            body.appendChild(inputAny); 
 
-
+            let buttonAny = document.createElement("button");
+            body.appendChild(buttonAny);
+            buttonAny.innerText = "кнопка";
+            }

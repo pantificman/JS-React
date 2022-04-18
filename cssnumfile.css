@@ -33,8 +33,31 @@ a:hover{text-decoration: none;}
 ul li{line-height: none;}
 img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;} */
-/*обнуление стилей>*/
+/* обнуление стилей */ 
 
 body{color:rgb(224, 190, 162); background-color:rgb(102, 93, 82);}
 h1{text-align: center; font-size: 30px;margin-top: 20px; text-shadow: 1px 0px 0px;}
 .authorOfCourse{text-align: center;}
+
+.container {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 2%;
+    background-color:rgb(184, 150, 150);
+    width: 177px;
+    height:200px; 
+    border: 2px solid black ;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+.inputNum{
+    width: 160px;
+    }
+
+.reset {
+    width: 95px
+}
+.equal{
+    width: 80px;
+}
