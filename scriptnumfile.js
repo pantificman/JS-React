@@ -23,43 +23,41 @@ let inputBtn = document.querySelector(".inputNum"),
         inputBtn.value = '';
     });
     
-    /* minusBtn.addEventListener("click", function(){
-        inputBtn.value = parseInt(inputBtn.value);
-
-        let numone = inputBtn.value;
-        let numtwo = inputBtn.value-numone;
-        let result = numone-numtwo;
-        result = inputBtn.value;
-    })
-
-    oneBtn.addEventListener("click", function (){
-        inputBtn.value = inputBtn.value + "1"});
-
-    twoBtn.addEventListener("click", function (){
-        inputBtn.value = inputBtn.value + "2"}); */
-
-const lines = 5;
-let result = '';
-
-/* for (let i = 0; i <= lines; i++) {
-    for (let j = 0; j < lines - i; j++) {
-        result += "*";
-    }
-    for (let j = 0; j < 2 * i + 1; j++) {
-        result += "+"; 
-    }
-    result += "\n";
+/* function sayHello(name){
+    return `Hello ${name}`;
 }
 
-console.log(result); */
-
-for(let i = 0; i <= lines; i++){
-    for(let j = 0; j < lines - i; j++){
-        result += " ";
-    }
-    for(let k = 0; k < 2*i + 1; k++){
-        result += "*";
-    }
-result += "\n";
-}
+let result = sayHello("Anton");
 console.log(result);
+
+
+function returnNeighboringNumbers(a){
+return [a-1, a, a+1];
+}
+let rez = returnNeighboringNumbers(2);
+console.log(rez); */
+// Место для первой задачи
+function sayHello(name) {
+    return `Hello ${name}`;
+    }
+    
+    // Место для второй задачи
+    function returnNeighboringNumbers(a) {
+    return [a-1, a, a+1];
+    }
+    
+    // Место для третьей задачи
+    function getMathResult(a,b) {
+    let str = "";
+        if( typeof(b) !== "number" || b <= 0){
+             return a;
+        }
+        for(let i = 1; i<=b; i++){
+            if(i == b){
+                str = str + i*a;
+            }else{
+            str = str + i*a +"---";
+            }
+            }
+        return str;
+    }
