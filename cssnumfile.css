@@ -61,3 +61,8 @@ h1{text-align: center; font-size: 30px;margin-top: 20px; text-shadow: 1px 0px 0p
 .equal{
     width: 80px;
 }
+.connectUs{
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100%;
+}

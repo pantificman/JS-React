@@ -22,42 +22,62 @@ let inputBtn = document.querySelector(".inputNum"),
     resetBtn.addEventListener("click", function (){
         inputBtn.value = '';
     });
-    
-/* function sayHello(name){
-    return `Hello ${name}`;
-}
 
-let result = sayHello("Anton");
-console.log(result);
-
-
-function returnNeighboringNumbers(a){
-return [a-1, a, a+1];
-}
-let rez = returnNeighboringNumbers(2);
-console.log(rez); */
-// Место для первой задачи
-function sayHello(name) {
-    return `Hello ${name}`;
+/* function showThis(a, b){
+    console.log(this);
+    function sum(){
+        console.log(this);
+        return a + b;
     }
-    
-    // Место для второй задачи
-    function returnNeighboringNumbers(a) {
-    return [a-1, a, a+1];
-    }
-    
-    // Место для третьей задачи
-    function getMathResult(a,b) {
-    let str = "";
-        if( typeof(b) !== "number" || b <= 0){
-             return a;
+    console.log(sum());
+}
+showThis(4, 5); */
+
+/* const obj = {
+    a : 20,
+    b : 15,
+    sum: function(){
+        function shout(){
+            console.log(this);
         }
-        for(let i = 1; i<=b; i++){
-            if(i == b){
-                str = str + i*a;
-            }else{
-            str = str + i*a +"---";
-            }
-            }
-        return str;
+        shout();
     }
+};
+obj.sum(); */
+
+class Rectangle {
+    constructor(height, width){
+        this.height = height;
+        this. width = width;
+    }
+
+    calcArea(){
+        return this.height * this.width;
+    }
+}
+
+class ColoredRectangleWithText extends Rectangle {
+    constructor(height, width, text, bgColor){
+        super(height, width);
+        this.text = text;
+        this.bgColor = bgColor;
+    }
+    showMyProps() {
+        console.log(`Текст: ${this.text}, цвет: ${this.bgColor} `);
+    }
+}
+
+const div = new ColoredRectangleWithText(25, 10, 'Hello', 'red');
+
+div.showMyProps();
+console.log(div.calcArea());
+
+/* const square = new Rectangle(10, 10);
+const long = new Rectangle(20, 100);
+
+console.log(square.calcArea());
+console.log(long.calcArea());
+ */
+// 1) Обычная функция : this = window, но если стоит "use strict" - undefined
+// 2) Контекст у методов обекта - сам обект
+// 3) this в конструкторах и классах - это новый экземпляр обекта
