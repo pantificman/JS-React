@@ -72,12 +72,39 @@ const div = new ColoredRectangleWithText(25, 10, 'Hello', 'red');
 div.showMyProps();
 console.log(div.calcArea());
 
-/* const square = new Rectangle(10, 10);
-const long = new Rectangle(20, 100);
+class MenuCard {
+    constructor(src, alt, title, descr, price, parentSelector){
+        this.src = src;
+        this.alt = alt;
+        this.title = title;
+        this.descr = descr;
+        this.price = price;
+        this.parent = document.querySelector(parentSelector);
+        this.transfer = 27;
+        this.changeToUAH();
+    }
+    //создаем метод для изменения валюты
+    changToUAH(){
+        this.price = this.price * this.transfer;
+    }
+    render(){
+        const element = document.createElement('div');
+        element.innerHTML = `
+        <div class='menu__item'>
+        <img src=${this.src} alt=${this.alt}>
+        <h3 class="menu__item-subtitle"Меню "Фитнес" </h3>
+        </div>
+        `;
+    }
+}
 
-console.log(square.calcArea());
-console.log(long.calcArea());
- */
-// 1) Обычная функция : this = window, но если стоит "use strict" - undefined
-// 2) Контекст у методов обекта - сам обект
-// 3) this в конструкторах и классах - это новый экземпляр обекта
+const logs = function(a, b, ...restOp){
+    console.log(a, b, restOp);
+};
+logs ('basic', 'rest', "operator", 'usage');
+
+function calc(number, basic = 2){
+    console.log(number * basic);
+}
+
+calc(3);
